@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <style>
+        /* Basic Resets */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          color: #333;
+          background-color: #f4f4f4;
+        }
+    
+        .container {
+          width: 80%;
+          margin: auto;
+          overflow: hidden;
+        }
+    
+        /* Header Styles */
+        header {
+          background: #50b3a2;
+          padding: 10px;
+          color: white;
+          text-align: center;
+          animation: fadeIn 2s ease-in;
+        }
+    
+        header h1 {
+          font-size: 2.5em;
+        }
+    
+        /* Navigation Styles */
+        nav {
+          background: #333;
+          color: #fff;
+          padding: 15px 0;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+    
+        nav ul {
+          list-style: none;
+        }
+    
+        nav ul li {
+          display: inline;
+          margin: 0 10px;
+        }
+    
+        nav ul li a {
+          color: #fff;
+          text-decoration: none;
+        }
+    
+        /* Main Content Styles */
+        .main {
+          background: #fff;
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+    
+        /* Footer Styles */
+        footer {
+          background: #333;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          margin-top: 20px;
+        }
+    
+        /* Animations */
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+    
+          100% {
+            opacity: 1;
+          }
+        }
+    
+        /* Add transitions for hover effects */
+        a {
+          transition: color 0.2s;
+        }
+    
+        a:hover {
+          color: #50b3a2;
+        }
+    
+        button {
+          transition: background-color 0.2s, color 0.2s;
+        }
+    
+        button:hover {
+          background-color: #50b3a2;
+          color: #fff;
+        }
+    
+        pre {
+          white-space: pre-wrap;
+          font-family: monospace;
+          background-color: #f4f4f4;
+          padding: 10px;
+          border-radius: 5px;
+        }
+    
+        .border,
+        pre,
+        code.highlighter-rouge {
+          border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        }
+    
+        /* Box styles for activities */
+        .activity-box {
+          border: 2px solid #50b3a2;
+          background-color: #f0f0f0;
+          padding: 20px;
+          margin-bottom: 20px;
+          border-radius: 10px;
+        }
+    
+        .activity-box h2 {
+          color: #50b3a2;
+          margin-bottom: 10px;
+        }
+    
+        .activity-box ol {
+          list-style-type: decimal;
+          padding-left: 20px;
+        }
+    
+        .activity-box ol li {
+          margin-bottom: 10px;
+        }
+    
+        .activity-box ol code {
+          background-color: #e8e8e8;
+          padding: 2px 5px;
+          border-radius: 3px;
+        }
+    
+.overlay {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    text-align: center;
+    padding: 50px;
+    transition: background 0.5s ease;
+}
+
+#myVideo {
+            width: 100%;
+            height: 100%;
+        }
+      </style>
+</head>
+
+<body>
+       <video autoplay muted loop id="myVideo">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+      
+    
+
+    <h5>Choose an Activity to start over:</h5>
+    <nav>
+    <ul>
+        <li><a href="#activity1">Activity 1: Create an account on GitHub</a></li>
+        <li><a href="#activity2">Activity 2: Create an account on Replit</a></li>
+        <li><a href="#activity3">Activity 3: Enroll in the "IT Essentials" course on Sadhana</a></li>
+        <br>
+        <li><a href="#activity4">Activity 4: Send an OTP to any phone number</a></li>
+        <li><a href="#activity5">Activity 5: Use the "cowsay" command</a></li>
+        <li><a href="#activity6">Activity 6: Typing practice using Typing Club</a></li>
+        <br>
+        <li><a href="#activity7">Activity 7: Explore files on your computer and create directories</a></li>
+        <li><a href="#activity8">Activity 8: Create a webpage using HTML and an image</a></li>
+        <li><a href="#activity9">Activity 9: Create a website using GitHub Pages</a></li>
+        <br>
+        <li><a href="#activity10">Activity 10: Delete a repository on GitHub</a></li>
+        <li><a href="#activity11">Activity 11: Add a YouTube video to your website</a></li>
+        <li><a href="#activity12">Activity 12: Add more content using GitHub Web Editor</a></li>
+        <br>
+        <li><a href="#activity13">Activity 13: Install Git-SCM</a></li>
+        <li><a href="#activity14">Activity 14: Open Git Bash(Windows) & use Git commands</a></li>
+        <li><a href="#activity15">Activity 15: Check the tasks</a></li>
+        <br>
+        <li><a href="#activity16">Activity 16: Create a local git repository</a></li>
+        <li><a href="#activity17">Activity 17: Configure your local git repo to a remote git repo on GitHub</a></li>
+        <li><a href="#activity18">Activity 18: Create a username on a Linux machine</a></li>
+        <br>
+        <li><a href="#activity19">Activity 19: Install VS Code and GitHub Copilot</a></li>
+        <li><a href="#activity20">Activity 20: Install Python</a></li>
+        <li><a href="#activity21">Activity 21: Create an aboutme.py file using Notepad</a></li>
+        <br>
+        <li><a href="#activity22">Activity 22: Run the program in aboutme.py using Git Bash</a></li>
+        <li><a href="#activity23">Activity 23: Additional Python Script Execution using Git Bash</a></li>
+    </ul>
+    </nav>
+    <div class="container">
+
+ <div class="activity-box">
+        <h2 id="activity1">Activity 1: Create an account on GitHub</h2>
+    <ol>
+        <li>Go to <a href="https://github.com/" target="_blank">GitHub website</a> in your web browser.</li>
+        <li>Click on the "Sign up" button.</li>
+        <li>Enter a unique username, valid email address, and a strong password. Follow the on-screen instructions.</li>
+        <li>Complete the CAPTCHA puzzle to prove you're not a robot.</li>
+        <li>Click on "Create account".</li>
+        <li>Open your email inbox, find the email from GitHub, and click on the verification link to verify your email.</li>
+        <li>Once verified, personalize your GitHub profile by adding a profile picture, bio, etc.</li>
+        <li>You've successfully created a GitHub account!</li>
+    </ol>
+ </div>
+ <div class="activity-box">
+    <h2 id="activity2">Activity 2: Create an account on Replit</h2>
+        <ol>
+            <li>Go to <a href="https://replit.com/" target="_blank">Replit website</a> in your web browser.</li>
+            <li>Click on the "Sign up" button.</li>
+            <li>Choose your preferred sign-up method (Google, GitHub, or email) and follow the prompts to sign up.</li>
+            <li>Complete any additional steps required for sign-up.</li>
+            <li>You've successfully created a Replit account!</li>
+        </ol>
+    </div>
+    <div class="activity-box">
+
+        <h2 id="activity3">Activity 3: Enroll in the "IT Essentials" course on Sadhana</h2>
+        <ol>
+            <li>Click on the link <a href="https://sadhana.enhance42.com/course/it-essentials" target="_blank">IT Essentials course</a>.</li>
+            <li>Fill in your details (if required) and click on the "Enroll" or "Sign Up" button.</li>
+            <li>Follow the on-screen instructions to complete the enrollment process.</li>
+            <li>Once enrolled, access the course materials and start learning!</li>
+        </ol>
+    </div>
+
+<div class="activity-box">
+        <!-- Activity 4: Send an OTP to any phone number -->
+    <h2 id="activity4">Activity 4: Send an OTP to any phone number</h2>
+    <ol>
+        <li>Open Replit.</li>
+        <li>Click on sign in using your Google account if you have already signed up once. If not then open the link <a href="https://replit.com/team/it-essentials-python-gvp2023" target="_blank">https://replit.com/team/it-essentials-python-gvp2023</a>.</li>
+        <li>Click Teams on the left-hand side window.</li>
+        <li>Click on <code class="language-plaintext highlighter-rouge">IT ESSENTIALS AND PYTHON PROGRAMMING LAB</code>.</li>
+        <li>Then you will be directed to respective projects in that particular team.</li>
+        <li>Open the <code class="language-plaintext highlighter-rouge">L#01:01. Send OTP</code> project.</li>
+        <li>Here you will be directed to the pattern.c file in which you will be able to see the following command <code class="language-plaintext highlighter-rouge">send_otp("your number here", 9958);</code>.</li>
+        <li>Now you can enter your phone number in the “your number here” section and run it.</li>
+        <li>You will now receive the OTP on your phone number.</li>
+    </ol>
+</div>
+<div class="activity-box">
+    <!-- Activity 5: "cowsay" command -->
+    <h2 id="activity5">Activity 5: "cowsay" command</h2>
+    <ol>
+        <li>Return to the <code class="language-plaintext highlighter-rouge">IT ESSENTIALS AND PYTHON PROGRAMMING LAB</code> project.</li>
+        <li>Open the <code class="language-plaintext highlighter-rouge">L#0:01.Run it</code> project.</li>
+        <li>Here you will be directed to the (.replit) file in which you will be able to see the following command:</li>
+        <code class="language-plaintext highlighter-rouge">cowsay Hello, world!</code>
+        <li>Press Enter.</li>
+        <li>The system should display a </li>
+        <h>Expected Console Output:</h>
+<pre>
+ _______________________
+&lt; Namasthey and Welcome &gt;
+ -----------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ _________________________________________________
+/ GVP - B.Tech 2023 - IT ESSENTIALS AND PYTHON \
+\ PROGRAMMING LAB                               /
+ -----------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ ____________________________________________
+/ Your onboarding to our Coding Platform \
+\ is complete!!!                          /
+ --------------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+
+ ________________________
+&lt; Meet you in the class. &gt;
+ ------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+</pre>
+    </ol>
+</div>
+<div class="activity-box">
+    <!-- Activity 6: Typing using TYPING CLUB -->
+    <h2 id="activity6">Activity 6: Typing using TYPING CLUB</h2>
+    <ol>
+        <li>Go to the <a href="https://www.typingclub.com/" target="_blank">Typing Club website</a>.</li>
+        <li>Sign up or log in to your Typing Club account.</li>
+        <li>Select a typing lesson or exercise to practice.</li>
+        <li>Follow the instructions to complete the typing exercise.</li>
+        <li>Practice regularly to improve your typing skills!</li>
+    </ol>
+</div>
+<div class="activity-box">
+        <!-- Activity 7: Explore files on your computer -->
+        <h2 id="activity7">Activity 7: Explore files on your computer</h2>
+        <ol>
+            <li>Open the File Explorer (Windows) or Finder (Mac).</li>
+            <li>Navigate through different folders to explore files on your computer.</li>
+            <li>Click on folders to open them and view their contents.</li>
+            <li>Double-click on files to open them with their associated applications.</li>
+            <li>Use the search bar to quickly find specific files or folders.</li>
+        </ol>
+    </div>
+    <div class="activity-box">
+        <!-- Activity 8: Create a webpage using HTML and an image file -->
+        <h2 id="activity8">Activity 8: Create a webpage using HTML and an image file</h2>
+        <ol>
+            <li>Open a text editor like Notepad (Windows) or TextEdit (Mac).</li>
+            <li>Create a new file and save it with a ".html" extension (e.g., "index.html").</li>
+            <li>Write HTML code to define the structure of your webpage.</li>
+            <li>Use the <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tag to insert an image into your webpage. Make sure the image file is in the same directory as your HTML file.</li>
+            <li>Save the changes to your HTML file.</li>
+            <li>Open the HTML file in a web browser to view your webpage with the inserted image.</li>
+        </ol>
+    </div>
+    <div class="activity-box">
+        <!-- Activity 9: Create a website using GitHub -->
+        <h2 id="activity9">Activity 9: Create a website using GitHub</h2>
+        <ol>
+             <li>Sign in to your GitHub account at <a href="https://github.com/" target="_blank">github.com</a>. If you don't have an account, click on "Sign up" to create one.</li>
+             <li>Once signed in, click on the "+" icon at the top right corner of the page and select "New repository" from the dropdown menu.</li>
+             <li>In the "Repository name" field, enter a name for your repository, such as "my-website".</li>
+             <li>(Optional) In the "Description" field, provide a brief description for your repository.</li>
+             <li>Make sure the repository visibility is set to "Public" to allow others to access your website.</li>
+             <li>(Optional) Check the "Initialize this repository with a README" option to create a README file for your repository.</li>
+             <li>Click on the <button style="color: white; background-color: green">Create repository</button> button to create your repository.</li>
+             <li>Navigate to your newly created repository on GitHub, where you want to host your website. </li>
+             <li>Click on the "Add file" button located near the top right corner of the repository interface. From the dropdown menu, select "Upload files".</li>
+             <li>You can either drag and drop your HTML file and image file directly into the file upload area or click on "Choose your files" to select them from your computer.</li>
+             <li>After uploading the files, GitHub will display them in the file list. Below the file list, you'll find a text box where you can enter a commit message. This message describes the changes you're making to the repository. For example, you can write "Initial commit" to signify that this is the first version of your website.</li>
+             <li>Once you've entered the commit message, click on the green "Commit changes" button to save your files to the repository.</li>
+             <li>Now that your files are in the repository, it's time to set up GitHub Pages to host your website.</li>
+             <li>In your repository, click on the "Settings" tab located near the top right corner of the repository interface.</li>
+             <li>Scroll down to the <code> Pages </code> within the Settings page.</li>
+             <li>Under the "Source" section, you'll see a dropdown menu. Select the branch you want to use for your GitHub Pages deployment. This is typically the "main" or "master" branch where your HTML file resides.</li>
+             <li>After selecting the branch, click on the <code>Save</code> button to apply the changes.</li>
+             <li>GitHub will now build your website using the files from the selected branch. Once the build process is complete, GitHub will provide you with a URL to access your website.</li>
+             <li>The URL will typically be in the format: https://[your-username].github.io/[repository-name]/. You can click on the provided link or copy and paste it into your web browser to view your website.</li>
+             <li>Whenever you want to update the content of your website, simply navigate back to your repository on GitHub.</li>
+             <li>Click on the file you want to edit, such as your HTML file.</li>
+             <li>Click the pencil icon (Edit) to make changes to the file.</li>
+             <li>After making your changes, scroll down to the bottom of the page and provide a commit message describing the updates you've made.</li>
+             <li>Finally, click on the green "Commit changes" button to save your edits.</li>
+             <li>GitHub will automatically rebuild your website with the updated content. You can then revisit the URL to see the changes reflected on your live website.</li>
+                
+        </ol>
+    </div>
+    <div class="activity-box">
+        <!-- Activity 10: Delete a repository in GitHub -->
+        <h2 id="activity10">Activity 10: Delete a repository in GitHub</h2>
+        <ol>
+            <li>Go to the repository you want to delete on GitHub.</li>
+            <li>Click on the "Settings" tab.</li>
+            <li>Scroll down to the "Danger Zone" section.</li>
+            <li>Click on the "Delete this repository" button.</li>
+            <li>Enter the name of the repository to confirm deletion and click on the <button style="background-color: grey;"> understand the consequences, delete this repository" </button>.</li>
+            <li>Your repository will be permanently deleted.</li>
+        </ol>
+    </div>
+    <div class="activity-box">
+        
+        <!-- Activity 11: Add a YouTube video to your website -->
+        <h2 id="activity11">Activity 11: Add a YouTube video to your website</h2>
+        <ol>
+            <li>Find the YouTube video you want to embed on your website.</li>
+            <li>Click on the "Share" button below the video.</li>
+            <li>Click on the "Embed" option.</li>
+            <li>Copy the HTML code provided in the embed box.</li>
+            <li>Paste the copied HTML code into your website's HTML file at the location where you want the video to appear.</li>
+            <li>Save your HTML file and reload your website to view the embedded YouTube video.</li>
+        </ol>
+    </div>
+    <div class="activity-box">
+        
+        <!-- Activity 12: Add more things using GitHub Web Editor -->
+        <h2 id="activity12">Activity 12: Add more things using GitHub Web Editor</h2>
+        <ol>
+            <li>Open your GitHub account in Chrome or Edge web browser and complete the login process.</li>
+            <li>Select a created repository of yours to add things and edit.</li>
+            <li>There are two ways to open the GitHub editor:
+                <ol type="i">
+                    <li>At the address bar, replace ".com" with ".dev" in the repository link and go to that URL to edit it.</li>
+                    <li>Use the shortcut by pressing the "." key on your keyboard.</li>
+                </ol>
+                <strong>NOTE:</strong> The second step may not work on all devices.</li>
+            <li>In the GitHub editor, open your already created files or create a new file using the option in the left side dialogue box.</li>
+            <li>After making your changes, go to the "Commit and push" option in the left side dialogue box.</li>
+            <li>Add a descriptive text message explaining your changes in the commit message box. This message will be displayed to code viewers and is helpful for teamwork.</li>
+            <li>Click on the <button style="background-color: green; color: antiquewhite;">Commit</button> button to save your edits.</li>
+            <li>Your changes will be saved to the repository.</li>
+        </ol>
+    </div>
+    <div class="activity-box">
+        
+        <!-- Activity 13: Install Git-SCM -->
+        <h2 id="activity13">Activity 13: Install Git-SCM</h2>
+        <ol>
+            <li>Open a web browser in your system.</li>
+            <li>Search for <a href="https://git-scm.com/" target="_blank">Git - Downloads </a> in the address bar of your web browser.</li>
+            <li>Go to the "Downloads" option on the left side of the screen.</li>
+            <li>Select the operating system of your machine (Windows, macOS, Linux, Unix, etc.).</li>
+            <li>Click on the "Click here to download" option to download Git-scm.</li>
+            <li>Set up Git-scm in your system.</li>
+            <li>After installation, open the downloaded file.</li>
+            <li>Follow the on-screen instructions to complete the installation process.</li>
+            <li>Search for "Git Bash" in the Windows search bar.</li>
+            <li>Open the Git Bash application.</li>
+        </ol>
+        
+    </div>
+    <div class="activity-box">
+        <!-- Activity 14: Open Git-Bash(Windows) & use Git commands -->
+        <h2 id="activity14">Activity 14: Open Git-Bash(Windows) & use Git commands</h2>
+        <ol>
+            <li>The application Git Scm is available in your system. Go to Windows, which is present at the bottom of your monitor screen, and search for "Git Bash".</li>
+            <li>You will see a black color interface.</li>
+            <li>Type the command "pwd"</li>div> to know the current path.</li>
+            <li>To add your information, use the following UNIX commands:
+                <ol type="i">
+                    <li>Use the command "git config --global user.name &lt;your-name&gt;" to set the user name.</li>
+                    <li>Use the command "git config --global user.email &lt;your-email&gt;" to set the user email.</li>
+                </ol>
+            </li>
+            <li>Your Git is now ready to use.</li>
+            <li>Use Git commands like git init, git add, git status, git commit, git log.</li>
+        </ol>
+        
+    </div>
+    <div class="activity-box">
+        <!-- Activity 15: Check the tasks -->
+        <h2 id="activity15">Activity 15: Check the tasks</h2>
+        <ol>
+            <li>Review the tasks or assignments provided to you.</li>
+            <li>Break down the tasks into smaller, manageable steps.</li>
+            <li>Set deadlines for each task to stay organized and on track.</li>
+            <li>Regularly check off completed tasks and update your progress.</li>
+        </ol>
+
+    </div>
+    <div class="activity-box">
+        <h2 id="activity16">Activity 16: Create a local git repository</h2>
+         <ol>   
+            <li>Open the Git Bash application on your machine.</li>
+            <li>Using the navigation commands direct your path to the directory where you want to create the local git repo.</li>
+            <li>Then after entering the path, initiate the git local repo by using the Unix command <code>git init</code>.</li>
+            <li>Then a hidden directory is created in your current directory which can be seen by running the command <code>ls -ah</code> (You will find the ".git" directory as hidden content).</li>
+            <li>To add all the files at once to the git repository, run the following git command: <code>git add .</code></li>
+            <li>To check whether the files are added or not, type the command <code>git status.</code></li>
+        </ol>
+
+    </div>
+    <div class="activity-box">
+        <h2 id="activity17">Activity 17: Configure your local git repo to a remote git repo on GitHub</h2>
+        <ol>
+            <li>Configure your User name and email ID by running the following commands:</li>
+            <code>git config --global user.name "[User-Name]"</code>
+            <code>git config --global user.email "[Email ID]"</code>
+            <li>Open the GitHub website in the web browser and log into it.</li>
+            <li>Create an empty repository without a readme file.</li>
+            <li>Open the repository and scroll down to find the following three lines:</li>
+            <code>git remote add origin https://github.com/[User-Name]/[Repositry-Name].git</code>
+            <code>git branch -M main</code>
+            <code>git push -u origin main</code>
+            <li>A pop-up will appear for authenticating your GitHub account.</li>
+            <li>Once authentication is complete, you are ready to go!</li>
+        </ol>
+
+    </div>
+    <div class="activity-box">
+        <h2 id="activity18">Activity 18: Create a username on a Linux machine</h2>
+        <ol>
+            <li>Go to Git Bash.</li>
+            <li>Run the command <code>ssh root@165.22.220.235</code>.</li>
+            <li>Enter the password when prompted and confirm it.</li>
+            <li>Use the command <code>adduser</code> to create a new user on the remote Linux server.</li>
+            <li>Create a user account with your name using the SSH command <code>ssh [User-name]@165.22.220.235</code>.</li>
+            <li>Enter a password for the user account and confirm it.</li>
+            <li>Your user account on the remote Linux machine is now created.</li>
+            <li>To verify the user account, run the command <code>whoami</code>.</li>
+            <li>If your name (e.g., Charan) is displayed, your user account exists.</li>
+            <li>Exit from the Linux machine by typing the command <code>exit</code>.</li>
+        </ol>
+
+    </div>
+    <div class="activity-box">
+        <h2 id="activity19">Activity 19: Install VS Code and GitHub Copilot</h2>
+        
+            <b><li>Method 1: From Microsoft Store</li></b>
+                <ol type="a">
+                    <li>Go to the search bar and search for “Microsoft Store”.</li>
+                    <li>Search for “VS Code” in the Microsoft Store.</li>
+                    <li>Open the first search result.</li>
+                    <li>Click on “Get”, then click on “Install”.</li>
+                    <li>Once the download is completed you can find it in the “All apps” list.</li>
+                </ol>
+            <b><li>Method 2: From Website</li></b>
+                <ol type="a">
+                    <li>Visit the official VS Code website: <a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></li>
+                    <li>Click on the "Download for Windows" button. This will download the installer file (.exe).</li>
+                    <li>Once the download is complete, run the installer by double-clicking on the downloaded file.</li>
+                    <li>Follow the installation wizard instructions. You can choose the default settings unless you have specific preferences.</li>
+                    <li>Click "Next" through the installation process.</li>
+                    <li>Optionally, you may choose to add "Open with Code" and "Add to path" options during installation.</li>
+                    <li>Click "Install" to start the installation process.</li>
+                    <li>Once the installation is complete, you can launch VS Code by clicking the "Finish" button.</li>
+                    <li>Now you will find a shortcut on the “Desktop” and also in the “All apps” list.</li>
+                </ol>
+            <b><li>GitHub copilot in VS Code</li></b>
+                <small><li><strong>Note</strong>: You can acess the GitHub copilet after the approval of GitHub Student Developer Pack only</li></small>
+                
+                <ol type="a">
+                    <li>Open VS Code</li>
+                <li>Click on the Extensions icon in the Activity Bar on the side of the window or use the shortcut “Ctrl+Shift+X”</li>
+                <li>In the Extensions view, search for "GitHub Copilot" in the search bar.</li>
+                <li>Find the GitHub Copilot extension in the search results. Click the "Install" button next to the GitHub Copilot extension.</li>
+                <li>GitHub Copilot, might require a restart of VS Code. After the installation is complete, you may be prompted to restart. If not, consider restarting VS Code manually.</li>
+                <li>Go to the accounts section in the Activity Bar on the left side window. You will find the Copilot option select it and click on “Sign in”</li>
+                <li>A new window opens, Sign in with your GitHub account</li>
+                </ol>
+        
+
+    </div>
+    <div class="activity-box">
+        <h2 id="activity20">Activity 20: Install Python</h2>
+        <ol>
+            <li>Method 1: From Microsoft Store</li>
+                <ol type="a">
+                    <li>Open any terminal and run "python" in it. (This works even in the VS Code terminal)</li>
+                    <li>A Microsoft Store window opens with a search result of all Python versions. Open the desired version you want to download.</li>
+                    <li>Click on "Get", then click on "Install".</li>
+                    <li>Once the download is completed, you can find it in the "All apps" list.</li>
+                </ol>
+            <li>Method 2: From python.org</li>
+                <ol type="a">
+                    <li>Visit the official Python website: <a href="https://www.python.org/">https://www.python.org/</a></li>
+                    <li>Click on the "Downloads" tab in the top navigation menu.</li>
+                    <li>Scroll down to find the latest version of Python. Click on the "Download Python 3.12.1" button (where 3.12.1 is the version number).</li>
+                    <li>Once the installer is downloaded, double-click on the downloaded file (python-3.12.1.exe) to run the installer.</li>
+                    <li>On the first page of the installer, make sure to check the box that says "Add Python 3.12 to PATH" before proceeding. This makes it easier to run Python from the command line. Click "Install Now" to begin the installation.</li>
+                    <li>The installer will now copy the necessary files and install Python. You can see the progress on the screen.</li>
+                    <li>Once the installation is complete, you'll see a screen with the message "Setup was successful." Make sure to check the box that says "Disable path length limit" if it appears.</li>
+                    <li>Open the Command Prompt and type "python --version" or "python -V" to verify that Python is installed. You should see the Python version number.</li>
+                </ol>
+        </ol>
+
+    </div>
+    <div class="activity-box">
+        <h2 id="activity21">Activity 21: Create an aboutme.py file using Notepad</h2>
+        <ol>
+            <li>Open Notepad.</li>
+            <li>Write your Python code <code>print("Hello, I am [Your Name]")</code></li>
+            <li>Save the file with a .py extension (e.g., aboutme.py).</li>
+        </ol>
+        </div>
+        <div class="activity-box">
+
+        <h2 id="activity22">Activity 22: Run the program in aboutme.py using Git Bash</h2>
+        <ol>
+            <li>Open Git Bash.</li>
+            <li>Navigate to the directory where aboutme.py is located.</li>
+            <li>Use the <code>python aboutme.py</code> command to run the Python script.</li>
+        </ol>
+        </div>
+
+    <div class="activity-box">
+        <h2 id="activity23">Activity 23: Additional Python Script Execution using Git Bash</h2>
+        <ol>
+            <li>Follow similar steps as in Activity 22 to navigate to the directory containing the Python script.</li>
+            <li>Execute the Python script using the python script_name.py command.</li>
+        </ol>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 RohiniKumar</p>
+      </footer>
+    </body>
+
+    </html>
